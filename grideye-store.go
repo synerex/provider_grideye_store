@@ -42,9 +42,10 @@ func init() {
 	if err != nil {
 		fmt.Printf("Can't obtain current wd")
 	}
-	dataDir = *baseDir
 	if dataDir == "default" {
 		dataDir = filepath.ToSlash(dataDir) + "/store"
+	} else {
+		dataDir = *baseDir
 	}
 	ds = &FileSystemDataStore{
 		storeDir: dataDir,
