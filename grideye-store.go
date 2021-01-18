@@ -138,10 +138,10 @@ func main() {
 	sxutil.RegisterDeferFunction(sxutil.UnRegisterNode)
 	log.Printf("GridEye-Store(%s) built %s sha1 %s", sxutil.GitVer, sxutil.BuildTime, sxutil.Sha1Ver)
 
-	channelTypes := []uint32{pbase.PEOPLE_COUNTER_SVC}
+	channelTypes := []uint32{pbase.GRIDEYE_SVC}
 
 	var rerr error
-	sxServerAddress, rerr = sxutil.RegisterNode(*nodesrv, "PCouterStore", channelTypes, nil)
+	sxServerAddress, rerr = sxutil.RegisterNode(*nodesrv, "GridEyeStore", channelTypes, nil)
 
 	if rerr != nil {
 		log.Fatal("Can't register node:", rerr)
@@ -161,7 +161,7 @@ func main() {
 		log.Print("Connecting SynerexServer")
 	}
 
-	geClient := sxutil.NewSXServiceClient(client, pbase.PEOPLE_COUNTER_SVC, "{Client:GridEyeStore}")
+	geClient := sxutil.NewSXServiceClient(client, pbase.GRIDEYE_SVC, "{Client:GridEyeStore}")
 
 	wg.Add(1)
 	log.Print("Subscribe Supply")
