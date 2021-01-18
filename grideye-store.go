@@ -38,6 +38,7 @@ var (
 
 func init() {
 	var err error
+	flag.Parse()
 	dataDir, err = os.Getwd()
 	if err != nil {
 		fmt.Printf("Can't obtain current wd")
@@ -134,7 +135,6 @@ func subscribeGridEyeSupply(client *sxutil.SXServiceClient) {
 }
 
 func main() {
-	flag.Parse()
 	go sxutil.HandleSigInt()
 	sxutil.RegisterDeferFunction(sxutil.UnRegisterNode)
 	log.Printf("GridEye-Store(%s) built %s sha1 %s", sxutil.GitVer, sxutil.BuildTime, sxutil.Sha1Ver)
