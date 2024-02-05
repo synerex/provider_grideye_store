@@ -34,6 +34,8 @@ github.com/shirou/gopsutil v2.19.11+incompatible h1:lJHR0foqAjI4exXqWsU3DbH7bX1x
 github.com/shirou/gopsutil v2.19.11+incompatible/go.mod h1:5b4v6he4MtMOwMlS0TUMTu2PcXUg8+E1lC7eC3UO/RA=
 github.com/synerex/proto_grideye v0.0.2 h1:THmatsqabyAKTJsz7wSp2FUorDO8XPcnH7TrbhTxnDw=
 github.com/synerex/proto_grideye v0.0.2/go.mod h1:YeMEbpnjNw19LipVM9NByxniMzTiigoVXxZYoPIO5Ow=
+github.com/synerex/proto_grideye v0.1.1 h1:5gIOEOrI/7paXpzb0FKPHTz/Bo7Amxap7mDEyUMbZtA=
+github.com/synerex/proto_grideye v0.1.1/go.mod h1:YeMEbpnjNw19LipVM9NByxniMzTiigoVXxZYoPIO5Ow=
 github.com/synerex/synerex_api v0.3.1 h1:fmxQhVaag/OUJELNoBxhebZ5Z23/cgfCNdYGl9XUY3g=
 github.com/synerex/synerex_api v0.3.1/go.mod h1:sVqiujIdRBLEtKGw4pKjNK3SPgK0ymTlLWL8Drf266A=
 github.com/synerex/synerex_nodeapi v0.5.3 h1:qBpHwys9jPzhn0M50MSckFWKb6tps23M8q5TJj/CsNw=

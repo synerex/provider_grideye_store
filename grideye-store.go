@@ -102,7 +102,7 @@ func supplyGridEyeCallback(clt *sxutil.SXServiceClient, sp *api.Supply) {
 			tm, _ := ptypes.Timestamp(ev.Ts)
 			tp, _ := ptypes.TimestampProto(tm.Add(9 * time.Hour))
 			ts := ptypes.TimestampString(tp)
-			line := fmt.Sprintf("%s,%s,%s,%s,%d,%v", ld, ts, ev.Typ, ev.Id, ev.Seq, ev.Temps)
+			line := fmt.Sprintf("%s,%s,%s,%s,%d,%v,%v", ld, ts, ev.Typ, ev.Id, ev.Seq, ev.Temps, ev.AudioSpectrum)
 			ds.store(line)
 		}
 	}
