@@ -95,12 +95,12 @@ func supplyGridEyeCallback(clt *sxutil.SXServiceClient, sp *api.Supply) {
 	err := proto.Unmarshal(sp.Cdata.Entity, ge)
 	if err == nil { // get GridEye
 		tm, _ := ptypes.Timestamp(ge.Ts)
-		tp, _ := ptypes.TimestampProto(tm.Add(9 * time.Hour))
+		tp, _ := ptypes.TimestampProto(tm)
 		ts0 := ptypes.TimestampString(tp)
 		ld := fmt.Sprintf("%s,%s,%s,%s,%s,%s,%d", ts0, ge.DeviceId, ge.Hostname, ge.Location, ge.Mac, ge.Ip, ge.Seq)
 		for _, ev := range ge.Data {
 			tm, _ := ptypes.Timestamp(ev.Ts)
-			tp, _ := ptypes.TimestampProto(tm.Add(9 * time.Hour))
+			tp, _ := ptypes.TimestampProto(tm)
 			ts := ptypes.TimestampString(tp)
 			line := fmt.Sprintf("%s,%s,%s,%s,%d,%v,%v", ld, ts, ev.Typ, ev.Id, ev.Seq, ev.Temps, ev.AudioSpectrum)
 			ds.store(line)
